@@ -74,6 +74,17 @@ header{
     }
 }
 
+/*images*/
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+/*home image div*/
+.bgimg{
+    
+}
+
 /*others*/
 p {
     font-family: 'Poppins', sans-serif;
@@ -101,6 +112,7 @@ ul ul a {
 }
 
 footer {
-  background-color: gray;
-  padding: 50px;
+  background-color: lightgray;
+  padding: 100px;
 }
+
