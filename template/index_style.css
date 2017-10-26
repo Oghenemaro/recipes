@@ -16,7 +16,7 @@ body{
     border-radius: 0;
  }
 
-/*index.html style implementation*/
+
 
 /*images*/
 .img-fluid{
@@ -26,6 +26,21 @@ body{
 
 
 /*others*/
+.bg-3{
+    background-color: lightgray;
+}
+
+
+.sign{
+    background-image: url(recipe.jpg);
+}
+
+
+.search-div{
+    top: 200px;
+    left: 200px;
+    z-index: 3;
+}
 hr{
 /*
     display: block;
@@ -60,7 +75,7 @@ ul ul a {
 
 
 footer {
-  background-color: lightgray;
+  background-color: dimgra;
 /*  padding: 5px;*/
     margin: 0px;
 }
@@ -68,6 +83,7 @@ footer {
 ul#footer_list li{
     display: inline-block;
 }
+
 
 
 /*columns % rows

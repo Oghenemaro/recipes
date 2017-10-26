@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon --exec babel-node ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/api-test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Oghenemaro/recipes.git"
   },
-  "author": "MAro",
+  "author": "Maro",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Oghenemaro/recipes/issues"
@@ -22,8 +22,13 @@
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
     "express": "^4.16.2",
-    "morgan": "^1.9.0"
+    "mocha": "^4.0.1",
+    "morgan": "^1.9.0",
+    "super": "^0.2.3",
+    "supertest": "^3.0.0",
+    "test": "^0.6.0"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
