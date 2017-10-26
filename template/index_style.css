@@ -61,8 +61,12 @@ ul ul a {
 
 footer {
   background-color: lightgray;
-  padding: 5px;
+/*  padding: 5px;*/
     margin: 0px;
+}
+
+ul#footer_list li{
+    display: inline-block;
 }
 
 
@@ -70,7 +74,7 @@ footer {
 */
 
 .row{
-    margin-bottom: 1em;
+/*    margin-bottom: 1em;*/
 }
 
 
