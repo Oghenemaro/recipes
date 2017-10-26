@@ -12,9 +12,9 @@
 
 
 <body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
 
+  <div class="container-fluid">
+        <nav class="navbar navbar-inverse">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -26,29 +26,32 @@
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="#">Home</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
         <li><a href="#">About</a></li>
-        <li  class="active"><a href="#">Recipes</a></li>
+        <li><a href="recipe.html">Recipes</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
-  </div>
 </nav>
+    </div>
 
 
 <div class="container-fluid ">    
   <div class="row">
-    <div class="col-sm-6 ">
-      <h2>Chocolate Cake Recipe<h2>
-      <img src="salad.jpg" class="img-responsive" style="width:100%" alt="Image">
+    <div class="col-sm-2"> </div>
+    <div class="col-sm-8">
+        <h2>Chocolate Cake Recipe</h2>
+      <img src="salad.jpg" class="img-responsive" style="width:100%" alt="Image" />
     </div>
-    </div>
+    <div class="col-sm-2"> </div>
+  </div>
 
     <div class="row">
-      <div class="col-sm-12">
+        <div class="col-sm-2"> </div>
+      <div class="col-sm-8">
         <hr >
         <h3>Ingredients.....</h3>
         <ul>
@@ -57,8 +60,6 @@
           <li>Do step C</li>
           <li>Do step D</li>
         </ul>
-      </div>
-      <div class="col-sm-12">
         <hr >
         <h3>Preparation....</h3>
 
@@ -70,21 +71,21 @@
           <hr>
         <h3>Related Video</h3>
         <video src=""></video>
-      </div>
-      <div class="col-sm-12 ">
-        <h3>Leave A Review</h3>
         <hr>
+        <h3>Leave A Review</h3>
         <textarea rows="5" cols="50"></textarea>
+        <hr>
         <h3>Reviews</h3>
         <hr>
-      </div>
+        </div>
     </div>
-</div><br>
-
-
-<footer class="container-fluid text-center">
+    <footer class="container-fluid text-center">
   <p>Copyright 2017</p>
 </footer>
+
+</div>
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

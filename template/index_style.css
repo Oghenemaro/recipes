@@ -1,29 +1,115 @@
 body{
+/*
 	margin: 0;
 	padding: 0;
+*/
 }
 
-header{
-	height: 70px;
-	background-color: gray;
-
+.container-fluid{
+	margin: 0;
+/*    padding: 0;*/
 }
+
 
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
  }
 
+/*index.html style implementation*/
+
+/*images*/
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*others*/
+hr{
+/*
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+*/
+    border-style: inset;
+    border-width: 1px;
+}
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+
+
+footer {
+  background-color: lightgray;
+  padding: 5px;
+    margin: 0px;
+}
+
+
+/*columns % rows
+*/
+
+.row{
+    margin-bottom: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*sidebar nav*/
 
 
+/*
 .wrapper {
     display: flex;
     align-items: stretch;
 }       
+*/
 
-/*vh is an unit thath refers to the viewport height.*/
+/*vh is an unit that refers to the viewport height.*/
 
+/*
 #sidebar {
     min-width: 250px;
     max-width: 250px;
@@ -63,7 +149,7 @@ header{
 }
 
 
-/*for smaller devices to keep sidebar initially closed*/
+for smaller devices to keep sidebar initially closed
 
 @media (max-width: 768px) {
     #sidebar {
@@ -73,46 +159,7 @@ header{
         margin-left: 0;
     }
 }
+*/
 
-/*images*/
-.img-fluid{
-    max-width: 100%;
-    height: auto;
-}
 
-/*home image div*/
-.bgimg{
-    
-}
-
-/*others*/
-p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: #999;
-}
-
-a, a:hover, a:focus {
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #6d7fcc;
-}
-
-.container-fluid{
-	padding: 0;
-	margin: 0;
-}
-
-footer {
-  background-color: lightgray;
-  padding: 100px;
-}
 

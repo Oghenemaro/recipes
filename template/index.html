@@ -10,8 +10,9 @@
 
 
 <body>
+<div class="container-fluid">
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+  
 
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -19,7 +20,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">More_Recipes</a>
+      <a class="navbar-brand" href="index.html">More_Recipes</a>
     </div>
 
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -30,27 +31,67 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="signup.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
-
-  </div>
 </nav>
-
-    
-<div class="row">
-  <div class="text-center">
-    <img src="mix.jpg" alt="Not supported" class="img-fluid" >
-  </div>
 </div>
-    
-    
-<div class="container-fluid">
 
 
-    <div class="container-fluid bg-3 text-center">    
+    
+
+<style>
+    .bg-3{
+        background-color: lightgray;
+    }
+</style>
+    
+<div class="container-fluid" >
+
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <img src="mix.jpg" alt="Not supported" class="img-fluid" >
+      </div>
+    </div>
+    <div class="container-fluid bg-3 text-center ">   
+    
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+            <div class="card" style="width: 20rem;">
+              <img class="card-img-top" src="recipe3.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card" style="width: 20rem;">
+              <img class="card-img-top" src="recipe3.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card" style="width: 20rem;">
+              <img class="card-img-top" src="recipe3.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+        </div>
+    </div>
+
       <h3>Feature recipes</h3><br>
       <div class="row">
+
         <div class="col-sm-3">
           <p>Indian Soup</p>
           <a href="recipe.html"><img src="recipe3.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
@@ -68,12 +109,24 @@
           <a href="recipe.html"><img src="recipe3.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
         </div>
       </div>
-    </div><br>
-
-</div>
-
-<footer class="container-fluid">
-    <div class="row justify-content-between">
+            <div class="row">
+        <div class="col-sm-4">
+          <p>Indian Soup</p>
+          <a href="recipe.html"><img src="recipe3.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+        <div class="col-sm-4"> 
+          <p>Austrian Beans</p>
+          <a href="recipe.html"><img src="recipe3.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+        <div class="col-sm-4"> 
+          <p>Austrian Beans</p>
+          <a href="recipe.html"><img src="recipe3.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
+        </div>
+      </div>
+    
+    
+    <footer>
+    <div class="row">
             <div class="col-sm-3">
               Copyright 2017
             </div>
@@ -90,7 +143,14 @@
   
     
 </footer>
+    </div>
+    
 
+
+</div>
+
+
+    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>

@@ -5,8 +5,6 @@ const bodyParser = require('body-parser');
 // Set up the express app
 const app = express();
 
-app.set('port', process.env.PORT || 8000);
-
 // Log requests to the console.
 app.use(logger('dev'));
 
@@ -18,11 +16,5 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get('*', (req, res) => res.status(200).send({
   message: 'Welcome to the beginning of nothingness.',
 }));
-
-
-app.listen(app.get('port'), () => {
-    console.log('Api running at '+app.get('port'));
-});
-
 
 module.exports = app;
