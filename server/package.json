@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon --exec babel-node ./bin/www",
-    "test": "mocha tests/api-test.js"
+    "test": "mocha --compilers js:babel-core/register server/tests/api-test.js --timeout 10000"
   },
   "repository": {
     "type": "git",
