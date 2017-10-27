@@ -56,17 +56,6 @@ describe("Test for Api routes", function(){
            });
        });
     
-//    
-//    
-//    describe("handle Incorrect Input", function(){
-//       it("should  ", function(){
-//           assert.equal(mainApp.rainDrops("Value"), "Value must be a number");
-//       });
-//
-//    });
-//    
-//    describe("Handles values without 3, 5, 7 as prime factors", function(){
-//
-//    });
+
 })
     

@@ -53,18 +53,13 @@ class Recipe {
     
     static upVote(req, res) {
     for (let i = 0; i <= recipe.length; i += 1) {
-      if (recipe[i].id == req.params.recipeId) {
+      if (recipe[i].id == req.params.recipeid) {
         const counter = parseInt(req.body.upvotes, 10);
         recipe[i].upvotes += counter;
         return res.status(201).send({ status: 'Success.', message: 'Upvote successful.' });
       }
     }
   }
-
-
-
-
-
 
 }
 
