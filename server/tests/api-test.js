@@ -9,6 +9,7 @@ const request = superTest(server);
 
 describe("Test for Api routes", function(){
     let record = {};
+//    beforeEach() runs its program before each test cases
     beforeEach( () => {
         record  =     {
                         id: 1,
@@ -19,8 +20,36 @@ describe("Test for Api routes", function(){
                         description: "Sauce for other meals",
                     }
     });
-       it("should return ' ", (done) => {
+//    test case for create endpoint
+       it("should return done ' ", (done) => {
            request.get('/api/v1/recipe')
+           .end((err, res) => {
+               expect(res).to.be.an('object');
+               done();
+           });
+       });
+    //    test case for create endpoint
+        it("should return done' ", (done) => {
+           request.post('/api/v1/recipe')
+           .send(record)
+           .end((err, res) => {
+               expect(res).to.be.an('object');
+               done();
+           });
+       });
+    //    test case for delete endpoint
+        it("should return done' ", (done) => {
+           request.delete('/api/v1/recipe/:recipeid')
+           .send(record)
+           .end((err, res) => {
+               expect(res).to.be.an('object');
+               done();
+           });
+       });
+    //    test case for update endpoint
+      it("should return done' ", (done) => {
+           request.put('/api/v1/recipe/:recipeid')
+           .send(record)
            .end((err, res) => {
                expect(res).to.be.an('object');
                done();
