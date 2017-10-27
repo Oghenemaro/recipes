@@ -13,7 +13,9 @@ class Recipe {
     static createRecipe (req, res) {
         //push new record to dummy storage
         recipe.push({
+//            increments id by 1 to its current length
             id: recipe.length + 1,
+            sends 
             meal: req.body.meal,
             ingredients: req.body.ingredients,
             description: req.body.description
@@ -35,7 +37,12 @@ class Recipe {
     }
     
     static deleteRecipe (req, res) {
-
+        for(let i = 0; i <= recipe.length; i += 1){
+            if(recipe[i].id == parseInt(req.params.recipeid, 10)) {
+                    recipe[i].slice(i, 1);
+                    return res.status(200).send({ status: true, message: recipe[i] });    
+            }
+        }
     }
 }
 

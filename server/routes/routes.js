@@ -5,10 +5,12 @@ module.exports = (app) => {
     message: 'Welcome to the Todos API!',
 }));
     
+//    api endpoints
     app.get('/api/v1/recipe', Recipe.getRecipes);
     app.get('/api/v1/recipe', Recipe.getRecipesWithHighestUpvote);
     app.post('/api/v1/recipe', Recipe.createRecipe);
     app.put('/api/v1/recipe/:recipeid', Recipe.updateRecipe);
+    app.delete('/api/v1/recipe/:recipeid', Recipe.deleteRecipe);
     
     
 };

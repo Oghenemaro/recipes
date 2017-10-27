@@ -10,8 +10,9 @@
 
 
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    
       <a class="navbar-brand" href="index.html">More_Recipes</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -27,23 +28,27 @@
         <a class="navbar-brand btn btn-primary" href="signup.html">Sign up</a>
         <a class="navbar-brand btn btn-primary" href="signin.html">Login</a>  
       </div>
-    </nav>
+    
 </div>
-
+</nav>
+    
 <div class="container-fluid" >
 
     <div class="row">
-      <div class="col-sm-12 text-center">
-        <img src="recipe.jpg" alt="Not supported" class="img-fluid" >
-        <div class="row position-absolute search-div">
-            <div class="col-sm-12">
-                <form class="form-inline">
-                <div class="form-group ">
-                    <input type="text" class="form-control" id="findRecipe" placeholder="Find A Recipe">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="col-sm-12 text-center sign">
+<!--        <img src="" alt="Not supported" class="img-fluid" >-->
+        <div class="row sign">
+            <div class="col-sm-5"></div>
+                <div class="col-sm-5" style="margin-top:125px; margin-bottom:200px">
+                    <h1>Find A Recipe</h1>
+                    <div class="form-group">
+                        <form class="form-inline" method="post" action="" style="width: 100%;" role="form">
+                            <input type="text" placeholder="Find A Recipe" name="fname" value="" class="form-control" required />
+                            <button class="btn btn-primary" name="submit" type="submit">Search</button>  
+                        </form>
+                    </div>
                 </div>
-            </form>
-            </div>
+            <div class="col-sm-2"></div>
         </div>
       </div>
     </div>
@@ -54,8 +59,8 @@
             <div class="card" style="width: 25rem;">
               <img class="card-img-top" src="recipe3.jpg" alt="Card image cap">
               <div class="card-body">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h4 class="card-title">Oxen Meat</h4>
+                <p class="card-text">This is a dish made specially for people with skills, its combination of popular health contents can make man a feel young again.</p>
                 <a href="#" class="btn btn-primary">View Details</a>
               </div>
             </div>
@@ -64,8 +69,8 @@
             <div class="card" style="width: 25rem;">
               <img class="card-img-top" src="recipe3.jpg" alt="Card image cap">
               <div class="card-body">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h4 class="card-title">Spicy Lam</h4>
+                <p class="card-text">This is a dish made specially for people with skills, its combination of popular health contents can make man a feel young again.</p>
                 <a href="#" class="btn btn-primary">View Details</a>
               </div>
             </div>
@@ -74,8 +79,8 @@
             <div class="card" style="width: 25rem;">
               <img class="card-img-top" src="recipe3.jpg" alt="Card image cap">
               <div class="card-body">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h4 class="card-title">Indian Soup</h4>
+                <p class="card-text">This is a dish made specially for people with skills, its combination of popular health contents can make man a feel young again.</p>
                 <a href="#" class="btn btn-primary">View Details</a>
               </div>
             </div>
@@ -105,12 +110,12 @@
         
         <h3 class="mt-5">Special Dishes</h3><br>
          <div class="col-sm-12" style="">
-            <div class="card-deck mt-5">
+            <div class="card-deck mt-4">
               <div class="card">
                 <img class="card-img-top" src="recipe3.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">Beans Soup</h4>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">This is a dish made specially for people with skills, its combination of popular health contents can make man a feel young again.</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">Last updated 3 mins ago</small>
@@ -120,7 +125,7 @@
                 <img class="card-img-top" src="recipe3.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">Hot Sauce</h4>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                  <p class="card-text">This is a dish made specially for people with skills, its combination of popular health contents can make man a feel young again.</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">Last updated 3 mins ago</small>
@@ -130,7 +135,7 @@
                 <img class="card-img-top" src="recipe3.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">Catacala</h4>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  <p class="card-text">This is a dish made specially for people with skills, its combination of popular health contents can make man a feel young again.</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">Last updated 3 mins ago</small>
@@ -140,7 +145,7 @@
                 <img class="card-img-top" src="recipe3.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h4 class="card-title">Catacala</h4>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  <p class="card-text">This is a dish made specially for people with skills, its combination of popular health contents can make man a feel young again.</p>
                 </div>
                 <div class="card-footer">
                   <small class="text-muted">Last updated 3 mins ago</small>
