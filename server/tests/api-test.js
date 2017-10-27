@@ -1,7 +1,7 @@
-const assert = require('chai').expect;
+const expect = require('chai').expect;
 const superTest = require('supertest');
 const mainApp = require('../controller/recipe');
-const server = require('../app');
+const server = require('../../app');
 
 //get api and run it through supertest
 const request = superTest(server);
@@ -9,7 +9,7 @@ const request = superTest(server);
 
 describe("Test for Api routes", function(){
     let record = {};
-    beforEach( () => {
+    beforeEach( () => {
         record  =     {
                         id: 1,
                         upvote: 20,
