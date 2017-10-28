@@ -1,3 +1,4 @@
+//necessary imports for test to work
 const expect = require('chai').expect;
 const superTest = require('supertest');
 const mainApp = require('../controller/recipe');
@@ -7,7 +8,9 @@ const server = require('../../app');
 const request = superTest(server);
 
 
+//cover for all test cases
 describe("Test for Api routes", function(){
+//    object to hold raw data that'll work with test
     let record = {};
 //    beforeEach() runs its program before each test cases
     beforeEach( () => {
@@ -20,7 +23,7 @@ describe("Test for Api routes", function(){
                         description: "Sauce for other meals",
                     }
     });
-//    test case for create endpoint
+//    test case to retrieve all recipe 
        it("should return done ' ", (done) => {
            request.get('/api/v1/recipe')
            .end((err, res) => {

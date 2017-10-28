@@ -1,5 +1,6 @@
 body{
     color: #fff;
+    background-color: #333;
 /*
 	margin: 0;
 	padding: 0;
@@ -17,7 +18,13 @@ body{
     border-radius: 0;
  }
 
-
+/*form*/
+.add_recipe_form{
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 5px 5px 50px 2px black;
+    border-radius: 10px;
+}
 
 /*images*/
 .img-fluid{
@@ -28,7 +35,6 @@ body{
 
 /*others*/
 .bg-3{
-    background-color: lightgray;
 }
 
 
