@@ -26,7 +26,7 @@ class Recipe {
             description: req.body.description
         });
         //return successful message
-        return res.status(200).send({ status: true, message: recipe.slice(-1) });
+        return res.status(200).send({ status: true + ": Record Inserted!!!", message: recipe.slice(-1) });
     }
     
     static updateRecipe (req, res) {
@@ -37,20 +37,23 @@ class Recipe {
                     recipe[i].ingredients = req.body.ingredients;
                     recipe[i].description = req.body.description;
                 
-                    return res.status(200).send({ status: true, message: recipe[i] });    
+                    return res.status(200).send({ status: true + ": Record Updated!!!", message: recipe[i] });    
             }
         }
     }
     
+//    not working
     static deleteRecipe (req, res) {
         for(let i = 0; i <= recipe.length; i += 1){
             if(recipe[i].id == parseInt(req.params.recipeid, 10)) {
                     recipe.slice(i, 1);
-                    return res.status(200).send({ status: true, message: recipe[i] });    
+                    return res.status(200).send({ status: true + ": Record Deleted!!!", message: recipe[i] });    
             }
         }
     }
     
+    
+//    not working
     static upVote(req, res) {
     for (let i = 0; i <= recipe.length; i += 1) {
       if (recipe[i].id == req.params.recipeid) {
