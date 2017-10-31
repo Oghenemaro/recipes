@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const clients = sequelize.define('clients', {
+  const clients = sequelize.define('Clients', {
     firstname: {
         type: DataTypes.STRING,
     },
@@ -17,13 +17,13 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
     },
     phone_number: {
-        type: DataTypes.NUMBER
+        type: DataTypes.INTEGER
     },
   }); 
     
     clients.associate = (models) => {
-        clients.hasMany(models.recipe, {
-           foreignKey: 'clientID',
+        clients.hasMany(models.recipes, {
+           foreignKey: 'id',
         });
         
     };

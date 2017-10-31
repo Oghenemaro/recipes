@@ -43,14 +43,14 @@ class Recipe {
     }
     
 //    not working
-//    static deleteRecipe (req, res) {
-//        for(let i = 0; i <= recipe.length; i += 1){
-//            if(recipe[i].id == parseInt(req.params.recipeid, 10)) {
-//                    recipe.slice(i, 1);
-//                    return res.status(200).send({ status: true + ": Record Deleted!!!", message: recipe[i] });    
-//            }
-//        }
-//    }
+    static deleteRecipe (req, res) {
+        for(let i = 0; i <= recipe.length; i += 1){
+            if(recipe[i].id == parseInt(req.params.recipeid, 10)) {
+                    recipe.slice(i, 1);
+                    return res.status(200).send({ status: true + ": Record Deleted!!!", message: recipe[i] });    
+            }
+        }
+    }
     
     
 //    not working

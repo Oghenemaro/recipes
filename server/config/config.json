@@ -9,16 +9,16 @@
   },
   "test": {
     "username": "postgres",
-    "password": "gregorian",
-    "database": "database_test",
+    "password": "root",
+    "database": "more-recipes",
     "host": "127.0.0.1",
     "port" : 5432,
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
-    "password": "gregorian",
-    "database": "database_production",
+    "password": "root",
+    "database": "more-recipes",
     "host": "127.0.0.1",
     "port" : 5432,
     "dialect": "postgres"

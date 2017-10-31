@@ -8,13 +8,13 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
     },
     description: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
     },
-  }),
+  });
         
     recipes.associate = (models) => {
-        recipes.belongsTo(models.clients, {
-            foreignKey: 'clientID',
+        recipes.belongsTo(models.Clients, {
+            foreignKey: 'id',
             onDelete: 'CASCADE',
         });
     };
