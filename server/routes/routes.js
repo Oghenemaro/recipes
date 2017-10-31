@@ -17,7 +17,7 @@ module.exports = (app) => {
 //    endpoints for users
     app.post('/api/v1/users', Users.createUser);
     app.get('/api/v1/users', Users.getUsers);
-    
+    app.post('/api/v1/users/signin', Users.signin);
     
 };
 
