@@ -31,6 +31,7 @@ class users {
                message : "User Account Created",
                Client : clients.firstname + " " + clients.lastname
         }))
+//      needs catch statement
     }
   
   
@@ -53,6 +54,7 @@ class users {
       const token = jwt.sign({ id: users.id }, 'supersecretkey', { expiresIn: 1440 });
       return res.status(201).send({ status: 'Success.', token, message: 'Login successful.' });
     })
+//    needs catch statement
   }
     
   
