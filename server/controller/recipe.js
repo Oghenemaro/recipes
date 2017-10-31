@@ -43,26 +43,26 @@ class Recipe {
     }
     
 //    not working
-    static deleteRecipe (req, res) {
-        for(let i = 0; i <= recipe.length; i += 1){
-            if(recipe[i].id == parseInt(req.params.recipeid, 10)) {
-                    recipe.slice(i, 1);
-                    return res.status(200).send({ status: true + ": Record Deleted!!!", message: recipe[i] });    
-            }
-        }
-    }
+//    static deleteRecipe (req, res) {
+//        for(let i = 0; i <= recipe.length; i += 1){
+//            if(recipe[i].id == parseInt(req.params.recipeid, 10)) {
+//                    recipe.slice(i, 1);
+//                    return res.status(200).send({ status: true + ": Record Deleted!!!", message: recipe[i] });    
+//            }
+//        }
+//    }
     
     
 //    not working
-    static upVote(req, res) {
-    for (let i = 0; i <= recipe.length; i += 1) {
-      if (recipe[i].id == req.params.recipeid) {
-        const counter = parseInt(req.body.upvotes, 10);
-        recipe[i].upvotes += counter;
-        return res.status(201).send({ status: 'Success.', message: 'Upvote successful.' });
-      }
-    }
-  }
+//    static upVote(req, res) {
+//    for (let i = 0; i <= recipe.length; i += 1) {
+//      if (recipe[i].id == req.params.recipeid) {
+//        const counter = parseInt(req.body.upvotes, 10);
+//        recipe[i].upvotes += counter;
+//        return res.status(201).send({ status: 'Success.', message: 'Upvote successful.' });
+//      }
+//    }
+//  }
 
 }
 

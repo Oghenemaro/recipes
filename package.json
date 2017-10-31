@@ -38,6 +38,7 @@
   "devDependencies": {
     "coveralls": "^3.0.0",
     "nodemon": "^1.12.1",
-    "nyc": "^11.2.1"
+    "nyc": "^11.2.1",
+    "sequelize-cli": "^3.0.0"
   }
 }
