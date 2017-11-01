@@ -30,9 +30,10 @@ module.exports = {
 //        not sure about this but if error occurs return here
       clientsID: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         onDelete: 'CASCADE',
         references: {
-            model: 'clients',
+            model: 'Clients',
             key: 'id',
          },
        },

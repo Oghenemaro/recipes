@@ -9,6 +9,7 @@ const clients = db.Clients;
 class users {
 //  sign up controller
     static createUser (req, res){
+//      define this style of variable declaration?
         const {firstname, lastname, email, gender, password} = req.body;
         if(password.length < 6 ){
           return res.status(400).send({status: false, message: "Password length must be greater than six (6)"  });
