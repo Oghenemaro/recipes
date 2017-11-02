@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   });
         
+//  i think this should be clientId @ foreignkey
     recipes.associate = (models) => {
         recipes.belongsTo(models.Clients, {
             foreignKey: 'id',

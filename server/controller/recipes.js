@@ -24,14 +24,16 @@ class recipes{
   
    static editRecipe(req, res){
      recipe.findById(req.params.id)
-      .then((recipe) => {
-        if(recipe.clientsID !== req.params.id){
+     
+      .then((recipes) => {
+       console.log(recipes.clientsID);
+        if(recipes.clientsID !== req.body['clientsID']){
           return res.status(400).json({status: 'Failed', message: 'You are not authorized to edit this recipe!!!!'})
         }
-        if(recipe.clientsID === req.params.id){
+        if(recipes.clientsID === req.body['clientsID']){
           const {recipe_name, ingredients, description} = req.body;
-          recipe.update({
-            recipe_name, ingredients, description
+          recipes.update({
+            recipe_name, ingredients, description,
           })
           .then(recipe => res.status(201).json(recipe))
           .catch(() => res.status(400).json({ status: 'Failed.', error: 'Could not update recipe' }));
@@ -42,21 +44,21 @@ class recipes{
 
     }
   
-//  static deleteRecipe(req, res){
-//    recipe.findById(req.params.id)
-//      .then((recipe) => {
-//        if(recipe.clientsID !== req.params.id){
-//          return res.status(400).json({status: 'Failed', message: 'You are not authorized to edit this recipe!!!!'})
-//        }
-//        if(recipe.clientsID === req.params.id){
-//          recipe.delete({
-//            
-//          })
-//          .then(recipe => res.status(201).json(recipe))
-//          .catch(() => res.status(400).json({ status: 'Failed.', error: 'Could not update recipe' }));
-//        }
-//    })
-//  }
+  static deleteRecipe(req, res){
+    recipe.findById(req.params.id)
+      .then((recipe) => {
+      console.log(req.params.id);
+      console.log(recipe.clientsID);
+        if(recipe.clientsID !== req.body['clientsID']){
+          return res.status(400).json({status: 'Failed', message: 'You are not authorized to delete this recipe!!!!'})
+        }
+        if(recipe.clientsID === req.body['clientsID']){
+          recipe.destroy({force : true})
+          .then(recipe => res.status(201).json({ status: 'Successful', error: 'Record Deleted' }))
+          .catch(() => res.status(400).json({ status: 'Failed.', error: 'Could not delete recipe' }))
+        }
+    })
+  }
   
   static getRecipes(req, res){
     recipe.findAll()

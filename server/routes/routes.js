@@ -24,7 +24,11 @@ module.exports = (app) => {
 //  route checks for token availability then token originality before permission to add recipe
     app.post('/api/v1/recipes', isLoggedIn.checkLogin, Session.checkUser, recipe.addRecipe);
     app.put('/api/v1/recipes/:id', isLoggedIn.checkLogin, Session.checkUser, recipe.editRecipe);
+    app.delete('/api/v1/recipes/:id', isLoggedIn.checkLogin, Session.checkUser, recipe.deleteRecipe);
+//  retrieve all recipes
     app.get('/api/v1/recipes', recipe.getRecipes);
+    
+    
     
 };
 
