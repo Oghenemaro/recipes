@@ -6,7 +6,7 @@
   "scripts": {
     "start:dev": "nodemon --exec babel-node ./bin/www",
     "build": "babel ./server/ -d dist",
-    "heroku-postbuild": "npm run build && node dist/bin/www.js",
+    "heroku-postbuild": "npm run build && node dist/app.js",
     "test": "mocha --compilers js:babel-core/register server/tests/api-test.js --timeout 10000",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "coveralls": "nyc npm test&& nyc report --reporter=text-lcov | coveralls"
