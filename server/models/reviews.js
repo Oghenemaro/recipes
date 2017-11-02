@@ -16,21 +16,20 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     }
   });
-        
-//  i think this should be clientId @ foreignkey
-    review.associate = (models) => {
-        review.belongsTo(models.users, {
-            foreignKey: 'id',
-            onDelete: 'CASCADE',
-        });
-    };
   
-      review.associate = (models) => {
-        review.belongsTo(models.recipes, {
-            foreignKey: 'id',
-            onDelete: 'CASCADE',
-        });
+  
+    review.associate = (models) => {
+      review.belongsTo(models.users, {
+        foreignKey: 'id',
+        onDelete: 'CASCADE',
+      });
     };
+    review.associate = (models) => {
+      review.belongsTo(models.recipes, {
+        foreignKey: 'id',
+        onDelete: 'CASCADE',
+    });
+  };
   
   
 

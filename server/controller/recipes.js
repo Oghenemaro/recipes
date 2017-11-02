@@ -6,12 +6,9 @@ const recipe = db.recipes;
 const reviews = db.reviews;
 
 class recipes{
-//  create recipes
-  //  sign up controller
   static addRecipe(req, res) {
       const {
         recipe_name, ingredients, description, userID} = req.body;
-//    console.log(userID)
        recipe
         .create({
           recipe_name,

@@ -61,17 +61,17 @@ class users {
     
   
   
-//  static addToFavorite (req, res){
-//     const {recipeID, userID} = req.body;
-////    console.log(userID)
-//       favorite
-//        .create({
-//          recipeID,
-//          userID
-//        })
-//        .then(favorite => res.status(201).json(favorite))
-//        .catch(() => res.status(400).json({ status: 'Failed.', error: 'Could not add.' }));
-//  }
+  static addToFavorite (req, res){
+     const {recipeID, userID} = req.body;
+//    console.log(userID)
+       favorite
+        .create({
+          recipeID,
+          userID: req.body['userID']
+        })
+        .then(favorite => res.status(201).json({status:'Successful', data: favorite}))
+        .catch(() => res.status(400).json({ status: 'Failed.', error: 'Could not add.' }));
+  }
   
   
   static getFavorite (req, res){

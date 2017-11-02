@@ -9,13 +9,7 @@ module.exports = (app) => {
     message: 'Welcome to More Recipes API!',
 }));
     
-//    api endpoints
-//    app.get('/api/v1/recipe', Recipe.getRecipes);
-//    app.post('/api/v1/recipe', Recipe.createRecipe);
-//    app.put('/api/v1/recipe/:recipeid', Recipe.updateRecipe);
-//    app.delete('/api/v1/recipe/:recipeid', Recipe.deleteRecipe);
-//    app.post('/api/v1/recipe/:recipeId/upVote', Recipe.upVote)
-//    app.get('/api/v1/recipe/:recipeid?sort=upvotes&order=desc', Recipe.getRecipes);
+
     
 //    endpoints for users
     app.post('/api/v1/users', Users.createUser);
@@ -30,7 +24,7 @@ module.exports = (app) => {
 //  review routes
     app.post('/api/v1/recipes/:id/reviews', isLoggedIn.checkLogin, Session.checkUser, recipe.postReview);
 //    favorite routes
-//    app.post('/api/users/:id/recipes', isLoggedIn.checkLogin, Session.checkUser, Users.addToFavorite);
+    app.post('/api/users/:id/recipes', isLoggedIn.checkLogin, Session.checkUser, Users.addToFavorite);
     app.get('/api/users/:id/recipes', isLoggedIn.checkLogin, Session.checkUser, Users.getFavorite);
   
     
