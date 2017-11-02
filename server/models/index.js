@@ -59,6 +59,11 @@ if (config.use_env_variable) {
   );
 }
 
+//here we read our models folder,
+//discovering and importing any and all the models in it, 
+//adding them to the db object and applying relationships between the models, 
+//if such relationships exist.
+
 fs
   .readdirSync(__dirname)
   .filter((file) =>

@@ -13,12 +13,14 @@ class Session{
     try{
 //      attempt to verify token
       verify_jwt = jwt.verify(req.token, secret_key);
+      console.log("verify_jwt: " + verify_jwt);
     }
     catch(error){
-      res.status(400).send({status: 'failed', message: 'Unauthorized User, provide correct information'});
+      res.status(401).send({status: 'failed', message: 'Unauthorized User, provide correct information'});
     }
     
 //    if token id not present
+//    cover with try catch
     if(!verify_jwt.id){
        const error = res.status(403).send({status: 'failed', message: 'Invalid token'});
        next(error);

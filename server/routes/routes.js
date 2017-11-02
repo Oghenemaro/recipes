@@ -30,7 +30,7 @@ module.exports = (app) => {
 //  review routes
     app.post('/api/v1/recipes/:id/reviews', isLoggedIn.checkLogin, Session.checkUser, recipe.postReview);
 //    favorite routes
-    app.post('/api/users/:id/recipes', isLoggedIn.checkLogin, Session.checkUser, Users.addToFavorite);
+//    app.post('/api/users/:id/recipes', isLoggedIn.checkLogin, Session.checkUser, Users.addToFavorite);
     app.get('/api/users/:id/recipes', isLoggedIn.checkLogin, Session.checkUser, Users.getFavorite);
   
     
