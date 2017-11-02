@@ -80,7 +80,7 @@ class users {
     
     .then((favorites) => { 
       if(!favorites){return res.status(401).send({status: 'failed', feed: "You are not authorized" });}
-      return res.status(201).json(favorites)})
+      return res.status(201).json( favorites)})
     .catch(() => res.status(400).json({ status: 'Failed.', error: 'Error getting favorite.' }));
   }
   

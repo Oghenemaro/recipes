@@ -10,7 +10,7 @@
   "test": {
     "username": "postgres",
     "password": "root",
-    "database": "more-recipes",
+    "database": "more-recipes_",
     "host": "127.0.0.1",
     "port" : 5432,
     "dialect": "postgres"
@@ -18,7 +18,7 @@
   "production": {
     "username": "postgres",
     "password": "root",
-    "database": "more-recipes",
+    "database": "more-recipes_production",
     "host": "127.0.0.1",
     "port" : 5432,
     "dialect": "postgres"
