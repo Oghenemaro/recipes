@@ -4,7 +4,8 @@
 import db from '../models/index';
 import jwt from 'jsonwebtoken';
 
-const clients = db.Clients;
+const user = db.users;
+const favorite = db.favorites;
 
 class users {
 //  sign up controller
@@ -19,7 +20,7 @@ class users {
 //        .then(hash) => {
 //          
 //        }
-        return clients
+        return user
           .create({
             firstname,
             lastname,
@@ -27,10 +28,10 @@ class users {
             gender,
             password
           })
-        .then (clients => res.status(201).send({
+        .then (user => res.status(201).send({
                success : true,
                message : "User Account Created",
-               Client : clients.firstname + " " + clients.lastname
+               Client : user.firstname + " " + user.lastname
         }))
 //      needs catch statement
     }
@@ -41,7 +42,7 @@ class users {
   
   static signin (req, res){
 //    find user
-    clients.findOne({
+    user.findOne({
       where: {
         email: req.body.email,
       },
@@ -60,8 +61,32 @@ class users {
     
   
   
+  static addToFavorite (req, res){
+     const {recipeID, userID} = req.body;
+//    console.log(userID)
+       favorite
+        .create({
+          recipeID,
+          userID: req.body['userID']
+        })
+        .then(favorite => res.status(201).json(favorite))
+        .catch(() => res.status(400).json({ status: 'Failed.', error: 'Could not add.' }));
+  }
+  static getFavorite (req, res){
+    favorite
+      .findAll({
+        where: { userID: req.body['userID']}
+    })
+    
+    .then((favorites) => { 
+      if(!favorites){return res.status(401).send({status: 'failed', feed: "You are not authorized" });}
+      return res.status(201).json(favorites)})
+    .catch(() => res.status(400).json({ status: 'Failed.', error: 'Error getting favorite.' }));
+  }
   
-    static getUsers (req, res){
+  
+  
+    static getSpecificUsers (req, res){
         return res.status(200).send({status: true, feed: clients });
     }
 }

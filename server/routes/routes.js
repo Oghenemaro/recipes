@@ -19,7 +19,7 @@ module.exports = (app) => {
     
 //    endpoints for users
     app.post('/api/v1/users', Users.createUser);
-    app.get('/api/v1/users', Users.getUsers);
+    app.get('/api/v1/users', Users.getSpecificUsers);
     app.post('/api/v1/users/signin',  Users.signin);
 //  route checks for token availability then token originality before permission to add recipe
     app.post('/api/v1/recipes', isLoggedIn.checkLogin, Session.checkUser, recipe.addRecipe);
@@ -27,7 +27,12 @@ module.exports = (app) => {
     app.delete('/api/v1/recipes/:id', isLoggedIn.checkLogin, Session.checkUser, recipe.deleteRecipe);
 //  retrieve all recipes
     app.get('/api/v1/recipes', recipe.getRecipes);
-    
+//  review routes
+    app.post('/api/v1/recipes/:id/reviews', isLoggedIn.checkLogin, Session.checkUser, recipe.postReview);
+//    favorite routes
+    app.post('/api/users/:id/recipes', isLoggedIn.checkLogin, Session.checkUser, Users.addToFavorite);
+    app.get('/api/users/:id/recipes', isLoggedIn.checkLogin, Session.checkUser, Users.getFavorite);
+  
     
     
 };

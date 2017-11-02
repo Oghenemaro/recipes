@@ -1,6 +1,9 @@
+//recipe model
+
+
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const recipes = sequelize.define('recipes', {
+  const recipe = sequelize.define('recipes', {
     recipe_name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -13,20 +16,42 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    clientsID: {
+
+    userID: {
       type: DataTypes.INTEGER,
       allowNull: false,
     }
   });
         
 //  i think this should be clientId @ foreignkey
-    recipes.associate = (models) => {
-        recipes.belongsTo(models.Clients, {
+    recipe.associate = (models) => {
+      recipe.belongsTo(models.users, {
             foreignKey: 'id',
             onDelete: 'CASCADE',
-        });
+      });
+    };
+  
+    recipe.associate = (models) => {
+      recipe.hasMany(models.favorites, {
+           foreignKey: 'id',
+      });
+        
+    };
+  
+    recipe.associate = (models) => {
+      recipe.hasMany(models.vote, {
+           foreignKey: 'id',
+      });
+        
+    };
+  
+    recipe.associate = (models) => {
+      recipe.hasMany(models.reviews, {
+           foreignKey: 'id',
+      });
+        
     };
 
-  return recipes;
+  return recipe;
 };
 

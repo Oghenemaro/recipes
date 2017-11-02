@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import db from '../models/index';
 
-const users = db.Clients;
+const users = db.users;
 //what does this represent?
 const secret_key = 'supersecretkey';
 
@@ -27,7 +27,7 @@ class Session{
 //      if token id present
 //      collect id an pass to request variable
       console.log('>>> JWT ' + verify_jwt.id);
-      req.body['clientsID'] = verify_jwt.id;
+      req.body['userID'] = verify_jwt.id;
       return next();
     }
     

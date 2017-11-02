@@ -1,6 +1,7 @@
+
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const clients = sequelize.define('Clients', {
+  const user = sequelize.define('users', {
     firstname: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -24,12 +25,32 @@ module.exports = (sequelize, DataTypes) => {
     },
   }); 
     
-    clients.associate = (models) => {
-        clients.hasMany(models.recipes, {
+    user.associate = (models) => {
+        user.hasMany(models.recipes, {
+           foreignKey: 'id',
+        });
+        
+    };
+  
+      user.associate = (models) => {
+        user.hasMany(models.vote, {
+           foreignKey: 'id',
+        });
+        
+    };
+  
+      user.associate = (models) => {
+        user.hasMany(models.favorites, {
+           foreignKey: 'id',
+        });
+        
+    };
+      user.associate = (models) => {
+        user.hasMany(models.reviews, {
            foreignKey: 'id',
         });
         
     };
 
-  return clients;
+  return user;
 };
