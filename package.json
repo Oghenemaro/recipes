@@ -15,6 +15,9 @@
     "type": "git",
     "url": "git+https://github.com/Oghenemaro/recipes.git"
   },
+  "engines": {
+    "node": "5.4.2"
+  },
   "author": "Maro",
   "license": "ISC",
   "bugs": {
