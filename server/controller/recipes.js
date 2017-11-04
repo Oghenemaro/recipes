@@ -50,6 +50,9 @@ class recipes{
         if(recipe.userID !== req.body['userID']){
           return res.status(400).json({status: 'Failed', message: 'You are not authorized to delete this recipe!!!!'})
         }
+        if(recipe.userID === null){
+          res.status(400).json({ status: 'Failed.', error: "Recipe Dosen't exist" })
+        }
         if(recipe.userID === req.body['userID']){
           recipe.destroy({force : true})
           .then(recipe => res.status(201).json({ status: 'Successful', error: 'Record Deleted' }))
