@@ -8,6 +8,8 @@ const user = db.users;
 const favorite = db.favorites;
 
 class users {
+  
+  
 //  sign up controller
     static createUser (req, res){
 //      define this style of variable declaration?
