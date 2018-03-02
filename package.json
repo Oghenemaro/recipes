@@ -1,0 +1,48 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server setup",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon --exec babel-node ./bin/www",
+    "start": "./node_modules/.bin/babel-node ./bin/www.js",
+    "test": "mocha --compilers js:babel-core/register server/tests/api-test.js --timeout 10000",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "coveralls": "nyc npm test&& nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oghenemaro/recipes.git"
+  },
+  "engines": {
+    "node": "v8.8.0"
+  },
+  "author": "Maro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oghenemaro/recipes/issues"
+  },
+  "homepage": "https://github.com/Oghenemaro/recipes#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mocha": "^4.0.1",
+    "morgan": "^1.9.0",
+    "pg": "^7.3.0",
+    "pg-hstore": "^2.3.2",
+    "super": "^0.2.3",
+    "supertest": "^3.0.0",
+    "test": "^0.6.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.0",
+    "nodemon": "^1.12.1",
+    "nyc": "^11.2.1"
+  }
+}
